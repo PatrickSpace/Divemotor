@@ -6,7 +6,10 @@
 	<persistence-unit name="divemotor"
 		transaction-type="JTA">
 		<jta-data-source></jta-data-source>
-		
+		<class>pe.edu.upc.entity.Area</class>
+		<class>pe.edu.upc.entity.Categoria</class>
+		<class>pe.edu.upc.entity.Marca</class>
+		<class>pe.edu.upc.entity.Planta</class>
 		<properties>
 			<property
 				name="javax.persistence.schema-generation.database.action"
