@@ -27,6 +27,10 @@ public class AreaController {
 		this.area= new Area();
 		listar();
 	}
+
+	public void limpiarArea() {
+		init();
+	}
 	
 	public Area getArea() {
 		return area;
@@ -41,12 +45,41 @@ public class AreaController {
 		this.listaareas = listaareas;
 	}
 	
-	
+	//
 	public void listar()
 	{
 		try
 		{
 			this.listaareas= aS.listararea();
+		}catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	public void insertar()
+	{
+		try
+		{
+			aS.insertar(this.area);
+			this.limpiarArea();
+			this.listar();
+		}catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	public void eliminar(Area area1) {
+		try {
+			aS.eliminar(area1.getIdArea());
+			this.listar();
+		}catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	public void modificar()
+	{
+		try {
+			aS.modificar(this.area);
+			this.limpiarArea();
+			this.listar();
 		}catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
