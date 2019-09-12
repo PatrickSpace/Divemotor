@@ -19,21 +19,36 @@ public class AreaDaoImpl implements IAreaDao,Serializable {
 	@Transactional
 	@Override
 	public void insertar(Area area) {
-		// TODO Auto-generated method stub
+		try
+		{
+			em.persist(area);
+		}catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
 		
 	}
 
 	@Transactional
 	@Override
 	public void eliminar(int areaId) {
-		// TODO Auto-generated method stub
+		try
+		{
+			em.remove(areaId);
+		}catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
 		
 	}
 
 	@Transactional
 	@Override
 	public void modificar(Area area) {
-		// TODO Auto-generated method stub
+		try
+		{
+			em.merge(area);
+		}catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
 		
 	}
 
