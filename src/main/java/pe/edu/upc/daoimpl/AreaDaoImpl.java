@@ -1,10 +1,12 @@
 package pe.edu.upc.daoimpl;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.transaction.Transactional;
 
 import pe.edu.upc.dao.IAreaDao;
@@ -52,10 +54,19 @@ public class AreaDaoImpl implements IAreaDao,Serializable {
 		
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Area> listararea() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Area> lista = new ArrayList<Area>();
+		try {
+			Query q = em.createQuery("select a from Area a");
+			lista = (List<Area>) q.getResultList();
+
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+
+		return lista;
 	}
 
 	
