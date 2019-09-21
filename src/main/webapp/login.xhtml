@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<link rel="stylesheet"
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></link>
+	<link rel="stylesheet" href="resources/css/login.css"></link>
+</h:head>
+<body>
+	<div
+		style="background-image: url(resources/img/divemotor.jpg); width: 100%; height: 100vh; background-size: cover;">
+		<h:form>
+			<div id="formlog" class="row"
+				style="background-color: #5353539d; transform: translate(-50%, -50%); width: 28%; max-height: 50vh; left: 50%; top: 50%; position: absolute; padding: 30px 10px;">
+				<h2 id="regis"
+					style="transform: translate(10px, -50px); position: absolute; text-align: center; color: white;">DIVEMOTOR</h2>
+
+				<div id="col1" class="col-lg-12">
+					<div class="form-group">
+						<input type="text" class="form-control" id="InputUser"
+							style="margin: 30px 0px;" placeholder="Usuario" />
+					</div>
+					<div class="form-group">
+						<input type="password" class="form-control" id="InputPssword"
+							placeholder="Contraseña" />
+					</div>
+
+					<button type="submit"
+						style="background-color: black; color: white; display: flex; border-radius: 40px; border: 1px solid white; margin: auto; margin-top: 20px;"
+						class="btn btn-dark">INGRESAR</button>
+
+					<p:commandButton
+						style="background-color: transparent; border: none; color: white; display: flex; margin: auto; margin-top: 20px;"
+						class="btn btn-dark" value="REGISTRARME" immediate="true" action="registro?faces-redirect=true"/>
+					 
+						
+				
+				</div>
+
+
+			</div>
+		</h:form>
+	</div>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+</body>
+</html>
