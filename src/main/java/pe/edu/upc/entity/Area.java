@@ -22,7 +22,7 @@ public class Area implements Serializable{
 
 	public Area() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public Area(int idArea, String nombreArea) {
