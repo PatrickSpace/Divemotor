@@ -19,8 +19,13 @@ public class MarcaDaoImpl implements IMarcaDao,Serializable{
 	@Transactional
 	@Override
 	public void insertar(Marca marca) {
-		// TODO Auto-generated method stub
-		
+		try
+		{
+			em.persist(marca);
+		}catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e.getMessage());
+		}
 	}
 	
 	@Transactional

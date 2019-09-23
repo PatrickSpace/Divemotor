@@ -9,4 +9,5 @@ public interface IPlantaDao {
 	public void eliminar(int IdEliminar);
 	public void modificar(Planta planta);
 	public List<Planta> listarplantas();
+
 }
