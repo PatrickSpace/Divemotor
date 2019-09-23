@@ -6,13 +6,15 @@
 	<persistence-unit name="divemotor"
 		transaction-type="JTA">
 		<jta-data-source>java:/divemotor</jta-data-source>
-		<class>pe.edu.upc.entity.Area</class>
 		<class>pe.edu.upc.entity.Categoria</class>
 		<class>pe.edu.upc.entity.Marca</class>
 		<class>pe.edu.upc.entity.Planta</class>
 		<class>pe.edu.upc.entity.Cargo</class>
 		<class>pe.edu.upc.entity.Usuario</class>
 		<class>pe.edu.upc.entity.Producto</class>
+			<class>pe.edu.upc.entity.Empleado</class>
+			<class>pe.edu.upc.entity.Pedido</class>
+			<class>pe.edu.upc.entity.DetallePedido</class>
 		<exclude-unlisted-classes>false</exclude-unlisted-classes>
 
 		<properties>

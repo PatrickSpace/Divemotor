@@ -11,20 +11,19 @@ import javax.persistence.MapsId;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-
 @Entity
-@Table(name = "Usuarios")
+@Table(name = "Usuario")
 public class Usuario implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	@Id
 	private int idUsuario;
-	
+
 	@OneToOne(cascade = CascadeType.ALL)
-	@MapsId  //de esa tabla iba a jalar redes
-	@JoinColumn(name = "idUsuario", nullable = false)  //interactuar entre los componentes
+	@MapsId
+	@JoinColumn(name = "idUsuario", nullable = false)
 	private Empleado empleado;
-	
+
 	@Column(name = "username", nullable = false, length = 30)
 	private String username;
 
@@ -54,6 +53,5 @@ public class Usuario implements Serializable {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
 
 }

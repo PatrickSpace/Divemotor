@@ -14,7 +14,7 @@ import javax.persistence.Table;
 public class Planta implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idPlanta;
@@ -43,10 +43,9 @@ public class Planta implements Serializable {
 		this.idPlanta = idPlanta;
 		this.nombrePlanta = nombrePlanta;
 	}
-	
-	public Planta()
-	{
+
+	public Planta() {
 		super();
 	}
-	
+
 }

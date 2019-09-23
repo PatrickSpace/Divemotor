@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 package pe.edu.upc.entity;
 
 import java.io.Serializable;
@@ -26,7 +19,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 
 @Entity
-@Table(name = "Empleados")
+@Table(name = "Empleado")
 public class Empleado implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -65,16 +58,13 @@ public class Empleado implements Serializable {
 	@JoinColumn(name = "idCargo", nullable = false)
 	private Cargo cargo;
 
-	@ManyToOne
-	@JoinColumn(name = "idArea", nullable = false)
-	private Area area;
-
+	
 	public Empleado() {
 		super();
 	}
 
 	public Empleado(int id, String nombre, String apellido, String dni, String correo, String direccion, Date fechaNac,
-			String telefono, Usuario usuario, Cargo cargo, Area area) {
+			String telefono, Usuario usuario, Cargo cargo) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
@@ -86,7 +76,7 @@ public class Empleado implements Serializable {
 		this.telefono = telefono;
 		this.usuario = usuario;
 		this.cargo = cargo;
-		this.area = area;
+		
 	}
 
 	public int getId() {
@@ -169,12 +159,6 @@ public class Empleado implements Serializable {
 		this.cargo = cargo;
 	}
 
-	public Area getArea() {
-		return area;
-	}
-
-	public void setArea(Area area) {
-		this.area = area;
-	}
+	
 
 }

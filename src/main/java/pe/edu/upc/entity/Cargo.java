@@ -9,14 +9,14 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Cargos")
+@Table(name = "Cargo")
 public class Cargo implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int codCargo;
-	
+
 	@Column(name = "Nombre")
 	private String nombreCargo;
 
@@ -35,6 +35,5 @@ public class Cargo implements Serializable {
 	public void setNombreCargo(String nombreCargo) {
 		this.nombreCargo = nombreCargo;
 	}
-	
 
 }

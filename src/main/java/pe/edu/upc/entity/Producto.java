@@ -8,26 +8,26 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
 @Entity
-	@Table(name = "Producto ")
+@Table(name = "Producto")
 public class Producto {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idProducto;
-	
+
 	@Column(name = "NombreProducto", nullable = false, length = 50)
 	private String nombreProducto;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "idCategoria", nullable = false)
 	private Categoria categoria;
-	
+
 	public Producto() {
 		super();
-		
+
 	}
-	
 
 	public Producto(int idProducto, String nombreProducto, Categoria categoria, Marca marca, int stock) {
 		super();
@@ -37,7 +37,6 @@ public class Producto {
 		this.marca = marca;
 		this.stock = stock;
 	}
-
 
 	public int getIdProducto() {
 		return idProducto;
@@ -81,12 +80,9 @@ public class Producto {
 
 	@ManyToOne
 	@JoinColumn(name = "idMarca", nullable = false)
-	private Marca marca;	
-	
+	private Marca marca;
+
 	@Column(name = "Stock", nullable = false, length = 20)
 	private int stock;
-	
-	
-	
 
 }
